@@ -1,0 +1,22 @@
+# Complete example at <https://github.com/cosmtrek/air/blob/master/air_example.toml>
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  args_bin = []
+  bin = "./tmp/go-ostore.exe"
+  cmd = "go build -o ./tmp/go-ostore.exe ./cmd/go-ostore/main.go" 
+  include_ext = ["go", "tpl", "tmpl", "html"]
+  exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+  exclude_regex = ["(\\.null-ls.*|_test)\\.go"]
+
+[log]
+  main_only = false
+  time = false
+
+[misc]
+  clean_on_exit = false
+
+[screen]
+  clear_on_rebuild = false
+  keep_scroll = true
